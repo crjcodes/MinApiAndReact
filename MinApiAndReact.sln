@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests.LabAPI", "IntegrationTests.LabAPI\IntegrationTests.LabAPI.csproj", "{DBC2A982-5839-488E-9209-3076187B3D1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{ADC695C4-62C7-473C-BD1D-384A420F11EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADC695C4-62C7-473C-BD1D-384A420F11EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADC695C4-62C7-473C-BD1D-384A420F11EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC2A982-5839-488E-9209-3076187B3D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC2A982-5839-488E-9209-3076187B3D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC2A982-5839-488E-9209-3076187B3D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC2A982-5839-488E-9209-3076187B3D1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

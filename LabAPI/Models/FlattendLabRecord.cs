@@ -1,4 +1,6 @@
-﻿namespace LabAPI.Models
+﻿using System.Text;
+
+namespace LabAPI.Models
 {
     public class FlattenedLabRecord
     {
@@ -9,5 +11,10 @@
         public DateTime DateMeasured { get; set; } = DateTime.MinValue;
         public float Value { get; set; } = 0;
         public string Units { get; set; } = string.Empty;
+
+        public string ToHtmlString()
+        {
+            return string.Format("<p>{0}: {1} - {2} {3}</p>", DateMeasured, Name, Value, Units) ;
+        }
     }
 }
