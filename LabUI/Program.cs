@@ -8,7 +8,6 @@ var app = builder.Build();
 
 // The API calls will move eventually to the appropriate spots in the web ui
 
-
 var apiUrl = builder.Configuration["LABWORK_API_URL"];
 var httpClient = new HttpClient();
 var client = new LabClient(apiUrl, httpClient);
