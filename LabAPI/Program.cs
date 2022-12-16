@@ -1,5 +1,10 @@
 using LabAPI;
 using LabAPI.Models;
+using Microsoft.OpenApi.Interfaces;
+using System;
+using System.ComponentModel;
+using System.Reflection;
+using System.Xml.Linq;
 
 //========================================================================
 // BUILDER ACTIONS
@@ -41,10 +46,13 @@ if (app.Environment.IsDevelopment())
 
 var records = builder.Configuration.GetSection("LabRecords").Get<List<FlattenedLabRecord>>();
 
-//app.MapGet("/", () => "Hello");
+// API ROUTING
+
+//app.MapGet("/", () => { return "Hello"; });
 app.MapGet("/", () => { return records; });
+
 app.MapGet("/LabRecords", () => { return records; });
-app.MapGet("/LabNames", () => { return records.Select(r => r.Name).Distinct(); });
+app.MapGet("/LabNames", () => { return records?.Select(r => r.Name).Distinct(); });
 
 app.Run();
 
