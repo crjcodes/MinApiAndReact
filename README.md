@@ -19,12 +19,22 @@ Currently, a bare-bones skeleton for the eventual goal.  Runs in debug only for 
 - The lab data is currently mocked up, coming in through json files loaded as part of the API's app configuration.
 - I chose to separate the api from the ui, instead of the usual minimal API approach of putting everything into the web front-end app -- sse *Separation of Concerns*
 
+## OpenAPI
+
+Note that the swagger.json is currently manually copied when running the API in debug to the file in the UI project. 
+
+There are [ways](https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/auto-regenerating-api-client-for-your-open-api-project/ba-p/3302390) to automate this.
+
+
 ## Design
 ### Separation of Concerns
 
 #### No to API+UI in the Same App
 
 Combining api calls, even minimal api calls, with the ui is not a favored approach of mine under most circumstances. If a really simple case, sure, but in most cases the api and the ui are going to have to scale and are going to be live for a length of time long enough to consider maintainability in the design.
+
+If this was the real world, a better choice would be to have the API and UI sitting in different solutions and deployed separately.
+
 
 # Iterations
 

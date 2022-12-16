@@ -53,6 +53,13 @@ app.MapGet("/", () => { return records; });
 
 app.MapGet("/LabRecords", () => { return records; });
 app.MapGet("/LabNames", () => { return records?.Select(r => r.Name).Distinct(); });
+app.MapGet("/LabRecords/Search", (string LabName) =>
+    {
+        return records?.Where(r => r.Name.ToUpper() == LabName.ToUpper());
+    });
+
+// REFERENCE
+// If a need exists to bind complex parameters, see https://code-maze.com/aspnetcore-query-string-parameters-minimal-apis/
 
 app.Run();
 

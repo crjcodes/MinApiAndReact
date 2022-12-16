@@ -11,10 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-      <OpenApiReference Include="Communications\LabAPI\swagger.json">
-		  <CodeGenerator>NSwagCSharp</CodeGenerator>
+      <OpenApiReference Include="Communications\LabAPI\swagger.json" CodeGenerator="NSwagCSharp">
 		  <Link>OpenAPIs\swagger.json</Link>
-		  <Namespace>ClientApi.Services</Namespace>
 		  <ClassName>LabClient</ClassName>
 		  <OutputPath>LabClient.cs</OutputPath>
 	  </OpenApiReference>
